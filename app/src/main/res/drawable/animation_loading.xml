@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/refresh_00"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_01"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_02"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_03"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_04"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_05"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_06"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_07"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_08"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_09"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_10"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_11"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_12"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_13"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_14"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_15"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_16"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_17"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_18"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_19"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_20"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_21"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_22"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_23"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_24"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_25"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_26"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_27"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_28"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_29"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_30"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_31"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_32"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_33"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_34"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_35"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_36"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_37"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_38"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_39"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_40"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_41"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_42"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_43"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_44"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_45"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_46"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_47"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_48"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_49"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_50"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_51"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_52"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_53"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_54"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_55"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_56"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_57"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_58"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/refresh_59"
+        android:duration="10" />
+</animation-list>

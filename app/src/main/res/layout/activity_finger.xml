@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_finger"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ydh.yudemo.selfview.finger.FingerActivity">
+
+    <com.ydh.yudemo.selfview.finger.DrawingView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:dv_circle_color="@color/blue_txt"
+        app:dv_circle_width="5dp"
+        android:visibility="gone"
+        app:dv_path_color="@color/red_txt"
+        app:dv_path_width="3dp" />
+    <com.ydh.yudemo.selfview.PictureView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

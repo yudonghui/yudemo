@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_match"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ydh.yudemo.MatchActivity">
+    <!-- <com.ydh.yudemo.widget.MatchView
+         android:id="@+id/matchView"
+         android:layout_width="320dp"
+         android:layout_height="20dp"
+         app:mv_text_size="10sp"
+         app:mv_lost="1"
+         app:mv_ping="6"
+         app:mv_total="10"
+         app:mv_win="3" />
+    -->
+    <!-- <TextView
+         android:id="@+id/award"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" />
+     <TextView
+         android:id="@+id/buycontent"
+         android:textColor="@color/blackColor"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" />-->
+    <com.ydh.yudemo.widget.YuTextView
+        android:id="@+id/textView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.ydh.yudemo.ScrollTranslationView
+        android:id="@+id/scrollTranslationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

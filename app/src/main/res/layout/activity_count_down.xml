@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_count_down"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/background">
+
+    <com.ydh.yudemo.widget.CountDownView
+
+        android:id="@+id/countDownView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        app:background_color="@color/gray_bg"
+        app:border_color="@color/blue_bord"
+        app:border_width="2dp"
+        app:count_down_time="5000"
+        app:text="跳过"
+        app:text_color="@color/white"
+        app:text_size="12sp" />
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/gray_bg"
+        android:gravity="center"
+        android:text="开始"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</RelativeLayout>

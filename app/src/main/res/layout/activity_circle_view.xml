@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.ydh.yudemo.circle.CircleViewActivity">
+
+    <com.ydh.yudemo.circle.CirclerView
+        android:id="@+id/circleView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:cv_color="@color/blue_bord"
+        app:cv_color_gray="@color/gray_bg"
+        app:cv_isradio="true"
+        app:cv_num="10"
+        app:cv_textsize="12sp"
+        app:cv_total="30"
+        app:cv_width="5dp" />
+    <Button
+        android:onClick="startClick"
+        android:text="开始"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ydh.yudemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="com.android.voicemail.permission.ADD_VOICEMAIL" />
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CountDownActivity" />
+        <activity android:name=".FloatViewActivity" />
+        <activity android:name=".keyboard.KeyboardActivity" />
+        <activity android:name=".circle.CircleViewActivity" />
+        <activity android:name=".JcActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".draggridview.DragActivity" />
+        <activity android:name=".smartrefreshlayout.SmartRefreshLayoutActivity" />
+        <activity android:name=".banner.BannerActivity" />
+        <activity android:name=".weelview.WeelViewActivity" />
+        <activity android:name=".gallery.GalleryActivity" />
+        <activity android:name=".sticky.StickyActivity" />
+        <activity android:name=".MatchActivity" />
+        <activity android:name=".numberlottery.NumberLotteryActivity" />
+        <activity
+            android:name=".permissiontest.permission.PermissionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:theme="@style/permission_PermissionActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:name=".permissiontest.PermissionTestActivity" />
+        <activity android:name=".expandtextview.ExpandTextViewActivity" />
+        <activity android:name=".reptile.ReptileActivity" />
+        <activity android:name=".reptile.MatchsShowActivity" />
+        <activity android:name=".permission.PermissionActivity" />
+        <activity android:name=".MoneyEditext.MoneyEditextActivity" />
+        <activity android:name=".selfview.SelfViewActivity" />
+        <activity android:name=".selfview.finger.FingerActivity" />
+        <activity android:name=".friends.FriendsActivity" />
+        <activity android:name=".friends.CommentsActivity" />
+        <activity android:name=".friends.DynamicImageActivity"></activity>
+    </application>
+
+</manifest>

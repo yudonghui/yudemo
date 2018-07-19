@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">收藏</string>
+    <!--——————————————————————权限申请——————————————————————-->
+    <string name="permission_name_calendar">日历</string>
+    <string name="permission_name_camera">相机</string>
+    <string name="permission_name_contacts">通讯录</string>
+    <string name="permission_name_location">位置信息</string>
+    <string name="permission_name_microphone">麦克风</string>
+    <string name="permission_name_phone">电话</string>
+    <string name="permission_name_sensors">身体传感器</string>
+    <string name="permission_name_sms">短信</string>
+    <string name="permission_name_storage">存储空间</string>
+    <string name="setting">设置</string>
+    <string name="resume">继续</string>
+    <string name="cancel">取消</string>
+    <string name="ok">好</string>
+    <string name="no">不</string>
+    <string name="permission_camera">相机</string>
+    <string name="permission_contact">联系人</string>
+    <string name="permission_location">位置</string>
+    <string name="permission_calendar">日历</string>
+    <string name="permission_microphone">麦克风</string>
+    <string name="permission_storage">存储</string>
+    <string name="permission_phone">电话</string>
+    <string name="permission_sensors">身体传感器</string>
+    <string name="permission_sms">短信</string>
+    <string name="successfully">成功</string>
+    <string name="failure">失败</string>
+    <string name="title_dialog">提示</string>
+    <string name="message_permission_rationale">允许以下权限以便程序继续执行：\n\n%1$s</string>
+    <string name="message_permission_always_failed">我们需要以下权限，请在设置中为我们开启：\n\n%1$s</string>
+    <string name="permission_setting">权限设置</string>
+    <!--——————————————————————权限申请——————————————————————-->
+
+     <string name="test"> 我们爱过，得到过自己想要的，想象着会有很好的未来，有你有我，可是多年以后，蓦然回首，发现自己，
+         一无所有，真的，真的一无所有，可那时，我们没有了继续追逐的勇气，没有了再爱一次的勇气，我们的存在，或许只是一次巧合，
+         可是为什么，我没有渴望被爱，如果我们像天上的流星，又为什么，会真实存在，
+         感谢我们曾经遇见，感谢我们曾经寒暄，谢谢你们，带我走过寒暑冬夏，青春不会有散场。</string>
+</resources>
