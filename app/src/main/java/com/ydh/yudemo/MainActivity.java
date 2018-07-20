@@ -17,6 +17,7 @@ import com.ydh.yudemo.keyboard.KeyboardActivity;
 import com.ydh.yudemo.permission.PermissionActivity;
 import com.ydh.yudemo.permissiontest.PermissionTestActivity;
 import com.ydh.yudemo.reptile.ReptileActivity;
+import com.ydh.yudemo.scroll.ScrollActivity;
 import com.ydh.yudemo.selfview.SelfViewActivity;
 import com.ydh.yudemo.smartrefreshlayout.SmartRefreshLayoutActivity;
 import com.ydh.yudemo.sticky.StickyActivity;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mPermissionYu;
     private TextView mMoneyEditext;
     private TextView mCommentReply;
+    private TextView mScroll;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         mPermissionYu = (TextView) findViewById(R.id.permissionyu);
         mMoneyEditext = (TextView) findViewById(R.id.money_editext);
         mCommentReply = (TextView) findViewById(R.id.comment_reply);
+        mScroll= (TextView) findViewById(R.id.scroll);
         mTest = (TextView) findViewById(R.id.test);
     }
 
@@ -94,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         mPermissionYu.setOnClickListener(PermissionYuListener);
         mMoneyEditext.setOnClickListener(MoneyEditextListener);//EditText 仿微信充值
         mCommentReply.setOnClickListener(CommentReplyListener);
+        mScroll.setOnClickListener(ScrollListener);//测量滑动的距离
         mTest.setOnClickListener(TestListener);//测试用的
 
     }
@@ -210,6 +214,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             startActivity(FriendsActivity.class);
+        }
+    };
+    View.OnClickListener ScrollListener=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(ScrollActivity.class);
         }
     };
     View.OnClickListener TestListener = new View.OnClickListener() {

@@ -73,7 +73,8 @@
         <activity android:name=".selfview.finger.FingerActivity" />
         <activity android:name=".friends.FriendsActivity" />
         <activity android:name=".friends.CommentsActivity" />
-        <activity android:name=".friends.DynamicImageActivity"></activity>
+        <activity android:name=".friends.DynamicImageActivity" />
+        <activity android:name=".scroll.ScrollActivity"></activity>
     </application>
 
 </manifest>
