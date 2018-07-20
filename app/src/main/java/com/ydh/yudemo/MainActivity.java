@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ydh.yudemo.MoneyEditext.MoneyEditextActivity;
+import com.ydh.yudemo.android_js.JsActivity;
 import com.ydh.yudemo.banner.BannerActivity;
 import com.ydh.yudemo.circle.CircleViewActivity;
 import com.ydh.yudemo.draggridview.DragActivity;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mMoneyEditext;
     private TextView mCommentReply;
     private TextView mScroll;
+    private TextView mJs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         mMoneyEditext = (TextView) findViewById(R.id.money_editext);
         mCommentReply = (TextView) findViewById(R.id.comment_reply);
         mScroll= (TextView) findViewById(R.id.scroll);
+        mJs = (TextView) findViewById(R.id.js);
         mTest = (TextView) findViewById(R.id.test);
     }
 
@@ -98,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         mMoneyEditext.setOnClickListener(MoneyEditextListener);//EditText 仿微信充值
         mCommentReply.setOnClickListener(CommentReplyListener);
         mScroll.setOnClickListener(ScrollListener);//测量滑动的距离
+        mJs.setOnClickListener(JsListener);//js交互
         mTest.setOnClickListener(TestListener);//测试用的
 
     }
@@ -220,6 +224,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             startActivity(ScrollActivity.class);
+        }
+    };
+    View.OnClickListener JsListener=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(JsActivity.class);
         }
     };
     View.OnClickListener TestListener = new View.OnClickListener() {
