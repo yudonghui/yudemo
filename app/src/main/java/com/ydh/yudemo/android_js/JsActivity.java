@@ -144,10 +144,10 @@ public class JsActivity extends BaseActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
             mWebView.goBack(); //goBack()表示返回WebView的上一页面
-            this.finish();
-            return true;
+            return super.onKeyDown(keyCode, event);
 
         }
-        return false;
+        //finish();
+        return super.onKeyDown(keyCode, event);
     }
 }

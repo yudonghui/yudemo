@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.ydh.yudemo.MoneyEditext.MoneyEditextActivity;
 import com.ydh.yudemo.android_js.JsActivity;
+import com.ydh.yudemo.animation.AnimationActivity;
 import com.ydh.yudemo.banner.BannerActivity;
 import com.ydh.yudemo.circle.CircleViewActivity;
 import com.ydh.yudemo.draggridview.DragActivity;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mCommentReply;
     private TextView mScroll;
     private TextView mJs;
+    private TextView mAnimation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         mCommentReply = (TextView) findViewById(R.id.comment_reply);
         mScroll= (TextView) findViewById(R.id.scroll);
         mJs = (TextView) findViewById(R.id.js);
+        mAnimation = (TextView) findViewById(R.id.animation);
         mTest = (TextView) findViewById(R.id.test);
     }
 
@@ -102,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         mCommentReply.setOnClickListener(CommentReplyListener);
         mScroll.setOnClickListener(ScrollListener);//测量滑动的距离
         mJs.setOnClickListener(JsListener);//js交互
+        mAnimation.setOnClickListener(AnimationListener);//动画效果
         mTest.setOnClickListener(TestListener);//测试用的
 
     }
@@ -230,6 +234,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             startActivity(JsActivity.class);
+        }
+    };
+    View.OnClickListener AnimationListener=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(AnimationActivity.class);
         }
     };
     View.OnClickListener TestListener = new View.OnClickListener() {

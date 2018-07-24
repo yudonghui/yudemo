@@ -75,7 +75,8 @@
         <activity android:name=".friends.CommentsActivity" />
         <activity android:name=".friends.DynamicImageActivity" />
         <activity android:name=".scroll.ScrollActivity" />
-        <activity android:name=".android_js.JsActivity"></activity>
+        <activity android:name=".android_js.JsActivity" />
+        <activity android:name=".animation.AnimationActivity"></activity>
     </application>
 
 </manifest>
