@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ydh.yudemo.animation.progressbar.ProgressActivity">
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal">
+
+        <com.ydh.yudemo.animation.progressbar.CircleBarView
+            android:id="@+id/circleView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:start_angle="-90" />
+
+        <TextView
+            android:id="@+id/circleViewTextView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="sdfasd"
+            android:textColor="@color/red_txt"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+
+    <com.ydh.yudemo.animation.progressbar.WaveProgressView
+        android:id="@+id/progressView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+</LinearLayout>

@@ -32,11 +32,11 @@
     <application
         android:name=".App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".YdhActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,7 +48,9 @@
         <activity android:name=".keyboard.KeyboardActivity" />
         <activity android:name=".circle.CircleViewActivity" />
         <activity android:name=".JcActivity" />
-        <activity android:name=".TestActivity" />
+        <activity
+            android:name=".TestActivity"
+            android:supportsPictureInPicture="true" />
         <activity android:name=".draggridview.DragActivity" />
         <activity android:name=".smartrefreshlayout.SmartRefreshLayoutActivity" />
         <activity android:name=".banner.BannerActivity" />
@@ -56,7 +58,6 @@
         <activity android:name=".gallery.GalleryActivity" />
         <activity android:name=".sticky.StickyActivity" />
         <activity android:name=".MatchActivity" />
-        <activity android:name=".numberlottery.NumberLotteryActivity" />
         <activity
             android:name=".permissiontest.permission.PermissionActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -68,7 +69,7 @@
         <activity android:name=".reptile.ReptileActivity" />
         <activity android:name=".reptile.MatchsShowActivity" />
         <activity android:name=".permission.PermissionActivity" />
-        <activity android:name=".MoneyEditext.MoneyEditextActivity" />
+        <activity android:name=".moneyeditext.MoneyEditextActivity" />
         <activity android:name=".selfview.SelfViewActivity" />
         <activity android:name=".selfview.finger.FingerActivity" />
         <activity android:name=".friends.FriendsActivity" />
@@ -76,7 +77,35 @@
         <activity android:name=".friends.DynamicImageActivity" />
         <activity android:name=".scroll.ScrollActivity" />
         <activity android:name=".android_js.JsActivity" />
-        <activity android:name=".animation.AnimationActivity"></activity>
+        <activity android:name=".animation.colorchange.AnimationActivity" />
+        <activity android:name=".qiantao.QiantaoActivity" />
+        <activity android:name=".yuanjiao.YuanJiaoActivity" />
+        <activity android:name=".animation.AnimationsActivity" />
+        <activity android:name=".animation.praise.PraiseActivity" />
+        <activity android:name=".animation.progressbar.ProgressActivity" />
+        <activity android:name=".animation.testproperty.PropertyAnimationActivity" />
+        <activity android:name=".animation.testproperty.ShaderActivity" />
+        <activity android:name=".retrofitrxjava.RetrofitActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.ydh.yudemo.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".retrofitrxjava.dagger.DaggerActivity" />
+        <activity android:name=".tree.TreeActivity" />
+        <activity android:name=".tree.TreeAddActivity" />
+        <activity android:name=".tree.TreeDetailActivity"></activity>
+        <activity
+            android:name=".tree.book.ShelfActivity"
+            android:launchMode="singleTask"></activity>
+
+        <activity android:name=".tree.book.ReadingActivity" />
     </application>
 
 </manifest>

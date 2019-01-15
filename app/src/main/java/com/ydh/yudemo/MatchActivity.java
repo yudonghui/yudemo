@@ -8,20 +8,24 @@ import com.ydh.yudemo.widget.YuTextView;
 
 public class MatchActivity extends AppCompatActivity {
     private Context mContext;
-     YuTextView mTextView;
+    YuTextView mTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match);
         mContext = this;
-         mTextView= (YuTextView) findViewById(R.id.textView);
+        mTextView = (YuTextView) findViewById(R.id.textView);
         ScrollTranslationView mTestView = (ScrollTranslationView) findViewById(R.id.scrollTranslationView);
-        mTestView.setHardwareAccelerated(mTestView,false);
-        mTextView.setHardwareAccelerated(mTextView,false);
+        mTestView.setHardwareAccelerated(mTestView, false);
+        mTextView.setHardwareAccelerated(mTextView, false);
+        addData();
+    }
+
+    private void addData() {
     }
 
     private void initView() {
-
     }
 
 }

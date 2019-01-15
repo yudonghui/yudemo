@@ -29,6 +29,7 @@ public class ScrollTranslationView extends View implements View.OnTouchListener 
     private int mDisplayHeight;
     private float mNowX = 0;
     private float mNowY = 0;
+
     public ScrollTranslationView(Context context) {
         super(context);
         this.mContext = context;
@@ -49,7 +50,7 @@ public class ScrollTranslationView extends View implements View.OnTouchListener 
     private Scroller mScroller;
 
     private void init(AttributeSet attrs) {
-        mDisplayWidth= DisplayUtil.getDisplayWidth(mContext);
+        mDisplayWidth = DisplayUtil.getDisplayWidth(mContext);
         mDisplayHeight = DisplayUtil.getDisplayHeight(mContext);
         rect = new Rect();
         initPaint();
@@ -75,27 +76,29 @@ public class ScrollTranslationView extends View implements View.OnTouchListener 
         canvasP.drawRect(rect, paint);
         paint.setColor(getResources().getColor(R.color.white));
         paint.setTextSize(20);
-        String aaa="阿斯顿发送到发送到发送到离开吉林省大V拉伸的麻烦了阿斯顿发送到发斯蒂芬" +
+        String aaa = "阿斯顿发送到发送到发送到离开吉林省大V拉伸的麻烦了阿斯顿发送到发斯蒂芬" +
                 "大事发生打发斯蒂芬阿斯顿发送到发斯蒂芬阿斯顿发斯蒂芬撒地方是阿斯顿发送到发斯蒂芬撒地方" +
                 "类目词那里放假好零食圣诞节快快新材料苦咖啡第十六届手动阀了解到了发大几天吗闪电" +
                 "发货老师来了休克容量is阿道夫历史课军绿色水电费老地方能力收代理费可接受的垃圾分类世" +
                 "纪东方两节课放哪里了来看是的拉大锯阿斯蒂芬拉速度快解放路上klvkjlml.sjfoij;老婆up记录记录了；；‘靠谱" +
                 "佛珠你疯了爱上了地府问题令人建瓯市都跟你说辣豆腐撒地方哈市领导赴is地方哪里玩儿";
-        drawTextCenter(aaa,canvasP,rect,paint);
+        drawTextCenter(aaa, canvasP, rect, paint);
         picture.endRecording();
         int height = (int) (picture.getHeight() * mScale);
         int widh = (int) (picture.getWidth() * mScale);
         //canvas.save();
-        if (mScroller.computeScrollOffset()){//动画没有完成
-            mNowX=mScroller.getCurrX();
-            mNowY=mScroller.getCurrY();
+        if (mScroller.computeScrollOffset()) {//动画没有完成
+            Log.e("动画没有结束", "111111");
+            mNowX = mScroller.getCurrX();
+            mNowY = mScroller.getCurrY();
             postInvalidate();
         }
-        rect.set((int)mNowX, (int)mNowY, (int)mNowX+widh, (int)mNowY+height);
+        rect.set((int) mNowX, (int) mNowY, (int) mNowX + widh, (int) mNowY + height);
         canvas.drawPicture(picture, rect);
-       // canvas.restore();
+        // canvas.restore();
 
     }
+
     private void drawTextCenter(String str, Canvas canvas, Rect rect, Paint paint) {
         if (!TextUtils.isEmpty(str)) {
             Paint.FontMetrics fontMetrics = paint.getFontMetrics();
@@ -104,6 +107,7 @@ public class ScrollTranslationView extends View implements View.OnTouchListener 
             canvas.drawText(str, x, y, paint);
         }
     }
+
     private float mLastDistance;//手指之间的距离
     private float[] scaleRange = new float[]{0.1f, 2.0f};
     private float mScale = 1.0f;
@@ -158,18 +162,18 @@ public class ScrollTranslationView extends View implements View.OnTouchListener 
         @Override
         public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
             Log.e("手势操作: ", "onScroll");
-            float a=getWidth()-picture.getWidth() * mScale;
-            mScrollRange[0]=a<0?a:0;
-            mScrollRange[1]=0;
-            float b=getHeight()-picture.getHeight()*mScale;
-            mScrollRange[2]=b<0?b:0;
-            mScrollRange[3]=0;
-            mNowX=mNowX-distanceX;
-            mNowY=mNowY-distanceY;
-            Log.e("滑动的距离","mNowX: "+mNowX+" mNowY: "+mNowY+" mScrollRange[0]: "+mScrollRange[0]
-            +" mScrollRange[2]: "+mScrollRange[2]);
-            mNowX=Math.max(mScrollRange[0],Math.min(mNowX,mScrollRange[1]));
-            mNowY=Math.max(mScrollRange[2],Math.min(mNowY,mScrollRange[3]));
+            float a = getWidth() - picture.getWidth() * mScale;
+            mScrollRange[0] = a < 0 ? a : 0;
+            mScrollRange[1] = 0;
+            float b = getHeight() - picture.getHeight() * mScale;
+            mScrollRange[2] = b < 0 ? b : 0;
+            mScrollRange[3] = 0;
+            mNowX = mNowX - distanceX;
+            mNowY = mNowY - distanceY;
+            Log.e("滑动的距离", "mNowX: " + mNowX + " mNowY: " + mNowY + " mScrollRange[0]: " + mScrollRange[0]
+                    + " mScrollRange[2]: " + mScrollRange[2]);
+            mNowX = Math.max(mScrollRange[0], Math.min(mNowX, mScrollRange[1]));
+            mNowY = Math.max(mScrollRange[2], Math.min(mNowY, mScrollRange[3]));
             invalidate();
             return true;
         }
@@ -182,13 +186,16 @@ public class ScrollTranslationView extends View implements View.OnTouchListener 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             Log.e("手势操作: ", "onFling");
-            Log.e("滑动的距离","velocityX:"+velocityX+"  velocityY: "+velocityY);
-            mScroller.fling((int)mNowX,(int)mNowY,(int)velocityX,(int)velocityY,(int)mScrollRange[0],
-                    (int)mScrollRange[1],(int)mScrollRange[2],(int)mScrollRange[3]);
+            Log.e("滑动的距离", "velocityX" + velocityX + "velocityY" + velocityY + "minx:" + mScrollRange[0] + "  maxx: " + mScrollRange[1]
+                    + "  miny: " + mScrollRange[2] + "  maxy: " + mScrollRange[3]);
+
+            mScroller.fling((int) mNowX, (int) mNowY, (int) velocityX, (int) velocityY, (int) mScrollRange[0],
+                    (int) mScrollRange[1], (int) mScrollRange[2], (int) mScrollRange[3]);
             return true;
         }
     };
     float[] mScrollRange = new float[4];//最小x，最大x. 最小y，最大y
+
     @SuppressLint({"NewApi"})
     public static void setHardwareAccelerated(View view, boolean z) {//硬件加速
         if (Build.VERSION.SDK_INT < 11) {

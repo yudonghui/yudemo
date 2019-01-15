@@ -14,7 +14,7 @@
     <color name="match_win">#FA4443</color>
     <color name="match_ping">#2EC11B</color>
     <color name="match_lost">#4394EF</color>
-
+    <color name="green_txt">#008000</color>
     <color name="orange_let">#fa9644</color>
     <!--橙色-->
     <color name="orange_bg">#ff8554</color>
@@ -32,4 +32,31 @@
     <color name="blue_txt">#2675eb</color>
     <!--蓝色背景-->
     <color name="blue_bg">#30cadd</color>
+
+    <color name="blue_light">#02A8F3</color>
+
+    <color name="light">#800de6e8</color>
+
+    <color name="browns_bg">#9a611c</color>
+
+    <color name="seek_bar_color_usual">#20a9c7</color>
+    <color name="seek_bar_color_old_time">#d49762</color>
+    <color name="seek_bar_color_eye">#34a98a</color>
+    <color name="seek_bar_color_night">#2b80cf</color>
+
+    <color name="text_color_normal">#8A000000</color>
+    <color name="text_color_night">#a9a8a8</color>
+    <color name="text_color_blue">#486c94</color>
+    <color name="text_color_white">#fbe6e3e3</color>
+    <color name="text_color_black">#121111</color>
+
+    <color name="btn_text_color">#ff000000</color>
+
+    <color name="stroke_color_light_normal">#c1c0c0</color>
+    <color name="stroke_color_dark_normal">#5c5c5c</color>
+    <color name="stroke_color_pressed">#1ca0be</color>
+
+    <color name="color_transparent">#00ffffff</color>
+
+    <color name="teeeeee">#fa4444</color>
 </resources>

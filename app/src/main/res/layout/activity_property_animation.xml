@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ydh.yudemo.animation.testproperty.PropertyAnimationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击按钮" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="取消动画" />
+
+        <Button
+            android:id="@+id/remove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="移除监听" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff0000ff"
+            android:padding="10dp"
+            android:text="动画效果"
+            android:textColor="@color/red_txt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.ydh.yudemo.animation.testproperty.LoadingImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="150dp"
+                android:src="@mipmap/loading1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="加载中。。。。" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.ydh.yudemo.animation.testproperty.ExpandView
+        android:id="@+id/expandView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp" />
+
+    <com.ydh.yudemo.animation.testproperty.BitmapShaderView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/bitmapShaderView" />
+
+</FrameLayout>

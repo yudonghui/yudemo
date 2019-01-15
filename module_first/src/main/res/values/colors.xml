@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black">#200000</color>
+    <color name="gray_eee">#EEEEEE</color>
+    <color name="blue_bord">#6eb0f3</color>
+    <color name="white">#ffffff</color>
+    <color name="red_txt">#fa4444</color>
+
+    <color name="match_win">#FA4443</color>
+    <color name="match_ping">#2EC11B</color>
+    <color name="match_lost">#4394EF</color>
+    <color name="green_txt">#008000</color>
+    <color name="orange_let">#fa9644</color>
+    <!--橙色-->
+    <color name="orange_bg">#ff8554</color>
+    <!--黄色背景-->
+    <color name="yellow_bg">#ffc95f</color>
+    <!--灰色背景色-->
+    <color name="gray_bg">#f5f5f5</color>
+    <!--订单列表的底色-->
+    <color name="order_bg">#f9f9f9</color>
+    <!--灰色边框,底部购买灰色背景-->
+    <color name="gray_box">#dddddd</color>
+    <!--辅助字体灰色-->
+    <color name="gray_txt">#999999</color>
+    <!--篮球字体颜色-->
+    <color name="blue_txt">#2675eb</color>
+    <!--蓝色背景-->
+    <color name="blue_bg">#30cadd</color>
+
+    <color name="light">#800de6e8</color>
+</resources>

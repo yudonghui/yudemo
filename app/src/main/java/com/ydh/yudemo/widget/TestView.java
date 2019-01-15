@@ -1,301 +1,284 @@
 package com.ydh.yudemo.widget;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
+import android.os.Build;
+import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Scroller;
+
+import com.ydh.yudemo.DisplayUtil;
+import com.ydh.yudemo.R;
+import com.ydh.yudemo.tree.BookView;
 
 /**
  * Created by Android on 2018/3/29.
  */
 
-public class TestView extends View implements View.OnTouchListener {
-    protected int screenWidth;
-    protected int screenHeight;
-    protected int lastX;
-    protected int lastY;
-    private int oriLeft;
-    private int oriRight;
-    private int oriTop;
-    private int oriBottom;
-    private int dragDirection;
-    private static final int TOP = 0x15;
-    private static final int LEFT = 0x16;
-    private static final int BOTTOM = 0x17;
-    private static final int RIGHT = 0x18;
-    private static final int LEFT_TOP = 0x11;
-    private static final int RIGHT_TOP = 0x12;
-    private static final int LEFT_BOTTOM = 0x13;
-    private static final int RIGHT_BOTTOM = 0x14;
-    private static final int CENTER = 0x19;
-    private int offset = 20;
-    protected Paint paint = new Paint();
-
-    /**
-     * 初始化获取屏幕宽高
-     */
-    protected void initScreenW_H() {
-        screenHeight = getResources().getDisplayMetrics().heightPixels - 40;
-        screenWidth = getResources().getDisplayMetrics().widthPixels;
-    }
-
-    public TestView(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-        setOnTouchListener(this);
-        initScreenW_H();
-    }
-
-    public TestView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        setOnTouchListener(this);
-        initScreenW_H();
-    }
+public class TestView extends View {
+    private Context mContext;
 
     public TestView(Context context) {
         super(context);
-        setOnTouchListener(this);
-        initScreenW_H();
+        mContext = context;
+        init();
+    }
+
+
+    public TestView(Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+        mContext = context;
+        init();
+    }
+
+    public TestView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        mContext = context;
+        init();
+    }
+
+    Paint paint;
+    Scroller mScroller;
+    GestureDetector gestureDetector;
+
+    private void init() {
+        mScroller = new Scroller(mContext);
+        gestureDetector = new GestureDetector(mContext, GestureListener);
+        gestureDetector.setIsLongpressEnabled(true);
+        paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setColor(ContextCompat.getColor(mContext, R.color.red_txt));
+        paint.setStrokeWidth(10);
+        paint.setStyle(Paint.Style.STROKE);
+        setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return gestureDetector.onTouchEvent(event);
+            }
+        });
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-        paint.setColor(Color.RED);
-        paint.setStrokeWidth(4.0f);
-        paint.setStyle(Paint.Style.STROKE);
-        canvas.drawRect(offset, offset, getWidth() - offset, getHeight()
-                - offset, paint);
+        Path path = new Path();
+        path.moveTo(0, 0);
+        path.lineTo(100, 200);
+        path.lineTo(210, 250);
+        path.lineTo(500, 600);
+        path.lineTo(300, 800);
+        path.lineTo(400, 700);
+        path.lineTo(500, 800);
+        path.lineTo(550, 700);
+        path.lineTo(600, 800);
+        path.lineTo(650, 700);
+        path.lineTo(700, 800);
+        path.lineTo(750, 700);
+        path.lineTo(800, 800);
+        path.lineTo(850, 700);
+        path.lineTo(900, 800);
+        path.lineTo(950, 700);
+        path.lineTo(1000, 800);
+        path.lineTo(1050, 700);
+        path.lineTo(1100, 800);
+        path.lineTo(1150, 700);
+        path.lineTo(1200, 800);
+        path.lineTo(1250, 700);
+        path.lineTo(1300, 800);
+        path.lineTo(1350, 700);
+        path.lineTo(1400, 800);
+        path.lineTo(1450, 700);
+        path.lineTo(1500, 800);
+        path.lineTo(1550, 700);
+        path.lineTo(1600, 800);
+        path.lineTo(1650, 700);
+        path.lineTo(1700, 800);
+        path.lineTo(1750, 700);
+        path.lineTo(1800, 800);
+        path.lineTo(1850, 700);
+        path.lineTo(1900, 800);
+        path.lineTo(1950, 700);
+        path.lineTo(2000, 800);
+        path.lineTo(2050, 700);
+        path.lineTo(2100, 800);
+        path.lineTo(2150, 700);
+        path.lineTo(2200, 800);
+        path.lineTo(2250, 700);
+        path.lineTo(2300, 800);
+        path.lineTo(2350, 700);
+        path.lineTo(2400, 800);
+        path.lineTo(2450, 700);
+        path.lineTo(2500, 800);
+        path.lineTo(2550, 700);
+        path.lineTo(2600, 800);
+        path.lineTo(2650, 700);
+        path.lineTo(2700, 800);
+        path.lineTo(2750, 700);
+        path.lineTo(2800, 800);
+        path.lineTo(2850, 700);
+        path.lineTo(2900, 800);
+        path.lineTo(2950, 700);
+        path.lineTo(3000, 800);
+        path.lineTo(3050, 700);
+        path.lineTo(3100, 800);
+        path.lineTo(3150, 700);
+        path.lineTo(3200, 800);
+        path.lineTo(3300, 700);
+        path.lineTo(3400, 800);
+        path.lineTo(3500, 700);
+        path.lineTo(3600, 800);
+        path.lineTo(3700, 700);
+        path.lineTo(3800, 800);
+        path.lineTo(3900, 700);
+        path.lineTo(4000, 800);
+        path.lineTo(4100, 800);
+        path.lineTo(4200, 800);
+        path.lineTo(4300, 800);
+        path.lineTo(4400, 800);
+        path.lineTo(4500, 800);
+        path.lineTo(4600, 800);
+        path.lineTo(4700, 800);
+        path.lineTo(4800, 800);
+        path.lineTo(4900, 800);
+        path.lineTo(5000, 800);
+        path.lineTo(5100, 800);
+        path.lineTo(5200, 800);
+        path.lineTo(5300, 800);
+        path.lineTo(5400, 800);
+        path.lineTo(5500, 800);
+        path.lineTo(5600, 800);
+        path.lineTo(5700, 800);
+        path.lineTo(5800, 800);
+        path.lineTo(5900, 800);
+        path.lineTo(6000, 800);
+        path.lineTo(6100, 800);
+        path.lineTo(6200, 800);
+        path.lineTo(6300, 800);
+        path.lineTo(6400, 800);
+        path.lineTo(6500, 800);
+        path.lineTo(6600, 800);
+        path.lineTo(6700, 800);
+        path.lineTo(6800, 800);
+        path.lineTo(6900, 800);
+        path.lineTo(7000, 800);
+        path.lineTo(7100, 800);
+
+
+        path.lineTo(850, 1000);
+        path.lineTo(900, 400);
+
+        path.lineTo(1000, 2000);
+        path.lineTo(2000, 4000);
+        canvas.drawPath(path, paint);
+    /*    canvas.save();
+        canvas.clipRect(100, 100, 300, 500);
+        canvas.drawColor(ContextCompat.getColor(mContext, R.color.blue_bg));
+        canvas.drawCircle(100, 100, 100, paint);
+        canvas.restore();
+        canvas.drawCircle(150, 150, 100, paint);*/
+        BookView view = new BookView(mContext);
+        view.setView("中国人");
+        Bitmap viewBitmap = convertViewToBitmap(view);
+        canvas.drawBitmap(viewBitmap, 0, 0, paint);
+        Log.e("画图", "ondraw");
     }
 
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
-        int action = event.getAction();
-        if (action == MotionEvent.ACTION_DOWN) {
-            oriLeft = v.getLeft();
-            oriRight = v.getRight();
-            oriTop = v.getTop();
-            oriBottom = v.getBottom();
-            lastY = (int) event.getRawY();
-            lastX = (int) event.getRawX();
-            dragDirection = getDirection(v, (int) event.getX(),
-                    (int) event.getY());
+    public Bitmap convertViewToBitmap(View view) {
+        //  view.destroyDrawingCache();
+        view.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
+                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+        int measuredWidth = view.getMeasuredWidth();
+        int measuredHeight = view.getMeasuredHeight();
+
+        int displayWidth = DisplayUtil.getDisplayWidth(mContext);
+        int displayHeight = DisplayUtil.getDisplayHeight(mContext);
+        Log.e("控件宽高", displayWidth + "高" + displayHeight);
+        view.layout(0, 0, displayWidth, displayHeight);
+        view.setDrawingCacheEnabled(true);
+        return view.getDrawingCache(true);
+    }
+
+    float currentX = 0;
+    float currentY = 0;
+    GestureDetector.OnGestureListener GestureListener = new GestureDetector.OnGestureListener() {
+        @Override
+        public boolean onDown(MotionEvent e) {
+            Log.e("手势操作: ", "onDown");
+            if (!mScroller.isFinished()) {
+                mScroller.forceFinished(true);
+            }
+            return true;
         }
-        // 处理拖动事件
-        delDrag(v, event, action);
-        invalidate();
-        return false;
-    }
 
-    /**
-     * 处理拖动事件
-     *
-     * @param v
-     * @param event
-     * @param action
-     */
-    protected void delDrag(View v, MotionEvent event, int action) {
-        switch (action) {
-            case MotionEvent.ACTION_MOVE:
-                int dx = (int) event.getRawX() - lastX;
-                int dy = (int) event.getRawY() - lastY;
-                switch (dragDirection) {
-                    case LEFT: // 左边缘
-                        left(v, dx);
-                        break;
-                    case RIGHT: // 右边缘
-                        right(v, dx);
-                        break;
-                    case BOTTOM: // 下边缘
-                        bottom(v, dy);
-                        break;
-                    case TOP: // 上边缘
-                        top(v, dy);
-                        break;
-                    case CENTER: // 点击中心-->>移动
-                        center(v, dx, dy);
-                        break;
-                    case LEFT_BOTTOM: // 左下
-                        left(v, dx);
-                        bottom(v, dy);
-                        break;
-                    case LEFT_TOP: // 左上
-                        left(v, dx);
-                        top(v, dy);
-                        break;
-                    case RIGHT_BOTTOM: // 右下
-                        right(v, dx);
-                        bottom(v, dy);
-                        break;
-                    case RIGHT_TOP: // 右上
-                        right(v, dx);
-                        top(v, dy);
-                        break;
+        @Override
+        public void onShowPress(MotionEvent e) {
+            Log.e("手势操作: ", "onShowPress");
+        }
+
+        @Override
+        public boolean onSingleTapUp(MotionEvent e) {
+            Log.e("手势操作: ", "onSingleTapUp");
+            return false;
+        }
+
+        @Override
+        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+            Log.e("手势操作: ", "onScroll");
+            currentX = currentX + distanceX;
+            currentY = currentY + distanceY;
+            Log.e("onScroll", "currentX" + currentX + " currentY" + currentY);
+            scrollTo((int) (currentX), (int) (currentY));
+            return true;
+        }
+
+        @Override
+        public void onLongPress(MotionEvent e) {
+            Log.e("手势操作: ", "onLongPress");
+        }
+
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            Log.e("手势操作: ", "onFling");
+            Log.e("滑动距离：", "velocityX: " + velocityX + " velocityY: " + velocityY
+                    + " currentX:" + currentX + " currentY:" + currentY);
+            //  mScroller.fling((int) currentX, (int) currentY, (int) velocityX, (int) velocityY, -2000, 0, -4000, 0);
+            float x = velocityX;
+            if (x < 0) {
+                float verX = (float) (x * 0.02);
+                while (x <= 0) {
+                    currentX = (float) (currentX + 50);
+                    scrollTo((int) currentX, (int) currentY);
+                    invalidate();
+                    // postInvalidate();
+                    Log.e("惯性滑动", "currentX:" + currentX + " X: " + x);
+                    x = x - verX;
                 }
-                if (dragDirection != CENTER) {
-                    v.layout(oriLeft, oriTop, oriRight, oriBottom);
-                }
-                lastX = (int) event.getRawX();
-                lastY = (int) event.getRawY();
-                break;
-            case MotionEvent.ACTION_UP:
-                dragDirection = 0;
-                break;
-        }
-    }
+            } else
 
-    /**
-     * 触摸点为中心->>移动
-     *
-     * @param v
-     * @param dx
-     * @param dy
-     */
-    private void center(View v, int dx, int dy) {
-        int left = v.getLeft() + dx;
-        int top = v.getTop() + dy;
-        int right = v.getRight() + dx;
-        int bottom = v.getBottom() + dy;
-        if (left < -offset) {
-            left = -offset;
-            right = left + v.getWidth();
-        }
-        if (right > screenWidth + offset) {
-            right = screenWidth + offset;
-            left = right - v.getWidth();
-        }
-        if (top < -offset) {
-            top = -offset;
-            bottom = top + v.getHeight();
-        }
-        if (bottom > screenHeight + offset) {
-            bottom = screenHeight + offset;
-            top = bottom - v.getHeight();
-        }
-        v.layout(left, top, right, bottom);
-    }
+            {
 
-    /**
-     * 触摸点为上边缘
-     *
-     * @param v
-     * @param dy
-     */
-    private void top(View v, int dy) {
-        oriTop += dy;
-        if (oriTop < -offset) {
-            oriTop = -offset;
+            }
+            return true;
         }
-        if (oriBottom - oriTop - 2 * offset < 200) {
-            oriTop = oriBottom - 2 * offset - 200;
-        }
-    }
+    };
 
-    /**
-     * 触摸点为下边缘
-     *
-     * @param v
-     * @param dy
-     */
-    private void bottom(View v, int dy) {
-        oriBottom += dy;
-        if (oriBottom > screenHeight + offset) {
-            oriBottom = screenHeight + offset;
+    @SuppressLint({"NewApi"})
+    public static void setHardwareAccelerated(View view, boolean z) {//硬件加速
+        if (Build.VERSION.SDK_INT < 11) {
+            return;
         }
-        if (oriBottom - oriTop - 2 * offset < 200) {
-            oriBottom = 200 + oriTop + 2 * offset;
+        if (z) {
+            view.setLayerType(2, null);
+        } else {
+            view.setLayerType(1, null);
         }
-    }
-
-    /**
-     * 触摸点为右边缘
-     *
-     * @param v
-     * @param dx
-     */
-    private void right(View v, int dx) {
-        oriRight += dx;
-        if (oriRight > screenWidth + offset) {
-            oriRight = screenWidth + offset;
-        }
-        if (oriRight - oriLeft - 2 * offset < 200) {
-            oriRight = oriLeft + 2 * offset + 200;
-        }
-    }
-
-    /**
-     * 触摸点为左边缘
-     *
-     * @param v
-     * @param dx
-     */
-    private void left(View v, int dx) {
-        oriLeft += dx;
-        if (oriLeft < -offset) {
-            oriLeft = -offset;
-        }
-        if (oriRight - oriLeft - 2 * offset < 200) {
-            oriLeft = oriRight - 2 * offset - 200;
-        }
-    }
-
-    /**
-     * 获取触摸点flag
-     *
-     * @param v
-     * @param x
-     * @param y
-     * @return
-     */
-    protected int getDirection(View v, int x, int y) {
-        int left = v.getLeft();
-        int right = v.getRight();
-        int bottom = v.getBottom();
-        int top = v.getTop();
-        if (x < 40 && y < 40) {
-            return LEFT_TOP;
-        }
-        if (y < 40 && right - left - x < 40) {
-            return RIGHT_TOP;
-        }
-        if (x < 40 && bottom - top - y < 40) {
-            return LEFT_BOTTOM;
-        }
-        if (right - left - x < 40 && bottom - top - y < 40) {
-            return RIGHT_BOTTOM;
-        }
-        if (x < 40) {
-            return LEFT;
-        }
-        if (y < 40) {
-            return TOP;
-        }
-        if (right - left - x < 40) {
-            return RIGHT;
-        }
-        if (bottom - top - y < 40) {
-            return BOTTOM;
-        }
-        return CENTER;
-    }
-
-    /**
-     * 获取截取宽度
-     *
-     * @return
-     */
-    public int getCutWidth() {
-        return getWidth() - 2 * offset;
-    }
-
-    /**
-     * 获取截取高度
-     *
-     * @return
-     */
-    public int getCutHeight() {
-        return getHeight() - 2 * offset;
     }
 }

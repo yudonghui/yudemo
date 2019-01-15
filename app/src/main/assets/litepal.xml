@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+    <dbname value="LabelStore"/>
+
+    <version value="1"/>
+
+    <list>
+        <mapping class="com.ydh.yudemo.tree.book.util.bookPageUtil.Label">
+
+        </mapping>
+    </list>
+</litepal>

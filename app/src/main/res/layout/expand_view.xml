@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/center"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="right|bottom"
+        android:background="@drawable/shape_circle"
+        android:gravity="center"
+        android:text="中心"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/one"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right|bottom"
+        android:background="@drawable/shape_circle"
+        android:gravity="center"
+        android:text="one"
+        android:tag="one"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/two"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right|bottom"
+        android:background="@drawable/shape_circle"
+        android:gravity="center"
+        android:text="two"
+        android:tag="two"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/three"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right|bottom"
+        android:background="@drawable/shape_circle"
+        android:gravity="center"
+        android:text="three"
+        android:tag="three"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/four"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right|bottom"
+        android:background="@drawable/shape_circle"
+        android:gravity="center"
+        android:text="four"
+        android:tag="four"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/five"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right|bottom"
+        android:background="@drawable/shape_circle"
+        android:gravity="center"
+        android:text="five"
+        android:tag="five"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+</FrameLayout>

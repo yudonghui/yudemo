@@ -1,4 +1,4 @@
-package com.ydh.yudemo.MoneyEditext;
+package com.ydh.yudemo.moneyeditext;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

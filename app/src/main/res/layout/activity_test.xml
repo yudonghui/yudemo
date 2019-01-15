@@ -1,38 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.ydh.yudemo.TestActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
 
-    <LinearLayout
-        android:id="@+id/root_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:background="@color/colorPrimary">
+        android:onClick="button"
+        android:text="点击" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="30dp"
-            android:background="@color/colorAccent">
+    <!-- <com.ydh.yudemo.widget.TestView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_alignParentTop="true" />-->
+    <com.ydh.yudemo.TestView2
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="40dp"
-                android:background="@color/pickerview_bg_topbar">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="@color/green_txt"
+            android:text="中国" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="50dp"
-                    android:background="@color/colorPrimaryDark" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:background="@color/red_txt"
+            android:text="今年" />
+    </com.ydh.yudemo.TestView2>
+    <!-- <com.ydh.yudemo.widget.ScrollViewGroup
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
 
-</LinearLayout>
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="@color/colorPrimary" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="@color/colorAccent" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="@color/blackColor" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="@color/colorAccent" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="@color/red_txt" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="@color/blue_bg" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="@color/green_txt" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="@color/orange_bg" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="@color/yellow_bg" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="@color/white" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="@color/orange_let" />
+
+
+     </com.ydh.yudemo.widget.ScrollViewGroup>-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="测试乐善奖法拉涉及到发疯阿斯顿"
+        android:textSize="20sp" />
+</RelativeLayout>
