@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/YuDemo.iml" filepath="$PROJECT_DIR$/YuDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/common2/common2.iml" filepath="$PROJECT_DIR$/common2/common2.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_first/module_first.iml" filepath="$PROJECT_DIR$/module_first/module_first.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yudemo.iml" filepath="$PROJECT_DIR$/yudemo.iml" />
     </modules>
   </component>
 </project>
