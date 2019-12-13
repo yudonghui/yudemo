@@ -38,6 +38,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".frame.database.DataBaseActivity"></activity>
+        <activity android:name=".frame.FrameActivity" />
+        <activity android:name=".androidutilcode.UtilsActivity" />
+        <activity android:name=".common.CommonActivity" />
+        <activity android:name=".common.popup.PopupActivity" />
         <activity android:name=".YdhActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,8 +75,8 @@
         <activity android:name=".expandtextview.ExpandTextViewActivity" />
         <activity android:name=".reptile.ReptileActivity" />
         <activity android:name=".reptile.MatchsShowActivity" />
-        <activity android:name=".permission.PermissionActivity" />
-        <activity android:name=".moneyeditext.MoneyEditextActivity" />
+        <activity android:name=".common.permission.PermissionActivity" />
+        <activity android:name=".common.moneyeditext.MoneyEditextActivity" />
         <activity android:name=".selfview.SelfViewActivity" />
         <activity android:name=".selfview.finger.FingerActivity" />
         <activity android:name=".friends.FriendsActivity" />
@@ -102,11 +107,10 @@
         <activity android:name=".retrofitrxjava.dagger.DaggerActivity" />
         <activity android:name=".tree.TreeActivity" />
         <activity android:name=".tree.TreeAddActivity" />
-        <activity android:name=".tree.TreeDetailActivity"></activity>
+        <activity android:name=".tree.TreeDetailActivity" />
         <activity
             android:name=".tree.book.ShelfActivity"
-            android:launchMode="singleTask"></activity>
-
+            android:launchMode="singleTask" />
         <activity android:name=".tree.book.ReadingActivity" />
     </application>
 

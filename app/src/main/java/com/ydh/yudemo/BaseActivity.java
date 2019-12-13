@@ -10,9 +10,9 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 
-import com.ydh.yudemo.permission.PermissionSetting;
-import com.ydh.yudemo.permission.PermissionUtils;
-import com.ydh.yudemo.permission.YuAlertDialog;
+import com.ydh.yudemo.common.permission.PermissionSetting;
+import com.ydh.yudemo.common.permission.PermissionUtils;
+import com.ydh.yudemo.common.permission.YuAlertDialog;
 import com.ydh.yudemo.utils.ActivityCollector;
 
 import java.util.ArrayList;

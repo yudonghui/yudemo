@@ -1,14 +1,13 @@
-package com.ydh.yudemo.moneyeditext;
+package com.ydh.yudemo.common.moneyeditext;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.util.Log;
-import android.view.View;
 
 import com.ydh.yudemo.R;
-import com.ydh.yudemo.moneyeditext.newmethod.MoneyEditText;
-import com.ydh.yudemo.moneyeditext.newmethod.MoneyTextWatcher;
+import com.ydh.yudemo.common.moneyeditext.newmethod.MoneyEditText;
+import com.ydh.yudemo.common.moneyeditext.newmethod.MoneyTextWatcher;
 
 public class MoneyEditextActivity extends AppCompatActivity {
 

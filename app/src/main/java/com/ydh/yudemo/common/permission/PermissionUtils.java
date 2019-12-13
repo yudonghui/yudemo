@@ -1,4 +1,4 @@
-package com.ydh.yudemo.permission;
+package com.ydh.yudemo.common.permission;
 
 import java.util.List;
 

@@ -8,16 +8,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ydh.yudemo.android_js.JsActivity;
+import com.ydh.yudemo.androidutilcode.UtilsActivity;
 import com.ydh.yudemo.animation.AnimationsActivity;
 import com.ydh.yudemo.banner.BannerActivity;
 import com.ydh.yudemo.circle.CircleViewActivity;
+import com.ydh.yudemo.common.CommonActivity;
 import com.ydh.yudemo.draggridview.DragActivity;
 import com.ydh.yudemo.expandtextview.ExpandTextViewActivity;
+import com.ydh.yudemo.frame.FrameActivity;
 import com.ydh.yudemo.friends.FriendsActivity;
 import com.ydh.yudemo.gallery.GalleryActivity;
 import com.ydh.yudemo.keyboard.KeyboardActivity;
-import com.ydh.yudemo.moneyeditext.MoneyEditextActivity;
-import com.ydh.yudemo.permission.PermissionActivity;
+import com.ydh.yudemo.common.permission.PermissionActivity;
 import com.ydh.yudemo.permissiontest.PermissionTestActivity;
 import com.ydh.yudemo.qiantao.QiantaoActivity;
 import com.ydh.yudemo.reptile.ReptileActivity;
@@ -49,7 +51,6 @@ public class YdhActivity extends AppCompatActivity {
     private TextView mExpandTextView;
     private TextView mReptile;
     private TextView mPermission;
-    private TextView mPermissionYu;
     private TextView mMoneyEditext;
     private TextView mCommentReply;
     private TextView mScroll;
@@ -59,6 +60,8 @@ public class YdhActivity extends AppCompatActivity {
     private TextView mYuanJiao;
     private TextView mRetrofit;
     private TextView mTree;
+    private TextView mUtils;
+    private TextView mFrame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +89,6 @@ public class YdhActivity extends AppCompatActivity {
         mPermission = (TextView) findViewById(R.id.permission);
         mExpandTextView = (TextView) findViewById(R.id.expandTextView);
         mReptile = (TextView) findViewById(R.id.reptile);
-        mPermissionYu = (TextView) findViewById(R.id.permissionyu);
         mMoneyEditext = (TextView) findViewById(R.id.money_editext);
         mCommentReply = (TextView) findViewById(R.id.comment_reply);
         mScroll = (TextView) findViewById(R.id.scroll);
@@ -96,6 +98,8 @@ public class YdhActivity extends AppCompatActivity {
         mYuanJiao = (TextView) findViewById(R.id.yuanjiao);
         mRetrofit = (TextView) findViewById(R.id.retrofit);
         mTree = findViewById(R.id.tree);
+        mUtils = findViewById(R.id.utils);
+        mFrame = findViewById(R.id.frame);
         mTest = (TextView) findViewById(R.id.test);
     }
 
@@ -117,9 +121,9 @@ public class YdhActivity extends AppCompatActivity {
         mPermission.setOnClickListener(PermissionListener);
         mExpandTextView.setOnClickListener(ExpandTextViewListener);
         mReptile.setOnClickListener(ReptileListener);//爬虫
-        mPermissionYu.setOnClickListener(PermissionYuListener);//权限申请
         mMoneyEditext.setOnClickListener(MoneyEditextListener);//EditText 仿微信充值
         mCommentReply.setOnClickListener(CommentReplyListener);//与微信朋友圈相关
+        mUtils.setOnClickListener(UtilsListener);//AndroidUtilCode工具类的应用
         mScroll.setOnClickListener(ScrollListener);//测量滑动的距离
         mJs.setOnClickListener(JsListener);//js交互
         mAnimation.setOnClickListener(AnimationListener);//动画效果
@@ -127,6 +131,7 @@ public class YdhActivity extends AppCompatActivity {
         mYuanJiao.setOnClickListener(YuanJiaoListener);//圆角或者圆形图
         mRetrofit.setOnClickListener(RetrofitListener);//retrofit
         mTree.setOnClickListener(TreeListener);//家谱树形图
+        mFrame.setOnClickListener(FrameListener);//框架
         mTest.setOnClickListener(TestListener);//测试用的
 
     }
@@ -240,16 +245,16 @@ public class YdhActivity extends AppCompatActivity {
             startActivity(ReptileActivity.class);
         }
     };
-    View.OnClickListener PermissionYuListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(PermissionActivity.class);
-        }
-    };
     View.OnClickListener MoneyEditextListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(MoneyEditextActivity.class);
+            startActivity(CommonActivity.class);
+        }
+    };
+    View.OnClickListener UtilsListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(UtilsActivity.class);
         }
     };
     View.OnClickListener CommentReplyListener = new View.OnClickListener() {
@@ -298,6 +303,12 @@ public class YdhActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             startActivity(TreeActivity.class);
+        }
+    };
+    View.OnClickListener FrameListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(FrameActivity.class);
         }
     };
     View.OnClickListener TestListener = new View.OnClickListener() {

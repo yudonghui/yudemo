@@ -132,7 +132,7 @@ public class JsActivity extends BaseActivity {
                 }
             });
         }
-
+        @JavascriptInterface
         public String getInfo() {
             return "获取手机内的信息！！";
         }

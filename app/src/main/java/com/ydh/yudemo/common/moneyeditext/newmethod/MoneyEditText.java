@@ -1,4 +1,4 @@
-package com.ydh.yudemo.moneyeditext.newmethod;
+package com.ydh.yudemo.common.moneyeditext.newmethod;
 
 import android.content.Context;
 import android.text.InputFilter;

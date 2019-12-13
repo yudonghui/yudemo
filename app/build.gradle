@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'org.greenrobot.greendao'
 android {
     compileSdkVersion versions.compileSdkVersion
     defaultConfig {
@@ -16,6 +16,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    greendao {
+        schemaVersion 1 //数据库版本号
+        daoPackage 'com.ydh.yudemo.frame.database.db'// 设置DaoMaster、DaoSession、Dao   一般包名+文件夹名
+        targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录   文件生成的目录，相当于父级目录
     }
     /*signingConfigs {
         release {
@@ -67,11 +72,16 @@ dependencies {
 
     annotationProcessor 'com.google.dagger:dagger-compiler:2.4'
 
+    api "com.jakewharton:butterknife:$versions.butterknife"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$versions.butterknife"
 
     implementation "com.android.support:recyclerview-v7:$versions.appcompat_v7"
     implementation "com.android.support:cardview-v7:$versions.appcompat_v7"
     implementation 'org.litepal.android:core:1.3.2'
-
+    //工具类
+    implementation 'com.blankj:utilcode:1.25.2'
+    //数据库操作
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
     //解析html第三方库
     api project(':common2')
     if (!isDebug.toBoolean()) {

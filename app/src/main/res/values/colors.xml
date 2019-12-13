@@ -10,7 +10,7 @@
     <color name="blue_bord">#6eb0f3</color>
     <color name="white">#ffffff</color>
     <color name="red_txt">#fa4444</color>
-
+    <color name="theme_color">#00B6B9</color>
     <color name="match_win">#FA4443</color>
     <color name="match_ping">#2EC11B</color>
     <color name="match_lost">#4394EF</color>

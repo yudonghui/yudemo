@@ -7,6 +7,11 @@
     function show(info){
         document.getElementById("shows").innerHTML = info;
     }
+
+        function test(){
+            var String= window.hello.getInfo()
+             alert(String)
+        }
     </script>
 </head>
 <body>
@@ -17,6 +22,7 @@
 <hr color="#99FF00"/>
 <button onClick="window.hello.showAndroid()">显示android内容</button>
 <br/>
+<button onClick="test()">获取返回值</button>
 <textarea id="shows" cols="20" rows="10"> 暂无记录 </textarea>
 <br/>
 

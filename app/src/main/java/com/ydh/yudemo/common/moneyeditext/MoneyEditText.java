@@ -1,4 +1,4 @@
-package com.ydh.yudemo.moneyeditext;
+package com.ydh.yudemo.common.moneyeditext;
 
 import android.content.Context;
 import android.text.Editable;

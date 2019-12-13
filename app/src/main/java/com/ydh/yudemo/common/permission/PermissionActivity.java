@@ -1,4 +1,4 @@
-package com.ydh.yudemo.permission;
+package com.ydh.yudemo.common.permission;
 
 import android.Manifest;
 import android.view.View;
