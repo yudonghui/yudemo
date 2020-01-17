@@ -32,6 +32,20 @@
                 android:background="@color/grayColor" />
 
             <TextView
+                android:id="@+id/MPAndroidChart"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="折线图MPAndroidChart的使用"
+                android:textColor="#865823"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grayColor" />
+
+            <TextView
                 android:id="@+id/money_editext"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -39,6 +53,7 @@
                 android:text="通用代码"
                 android:textColor="#e78865"
                 android:textSize="16sp" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
@@ -52,6 +67,7 @@
                 android:text="框架"
                 android:textColor="#e78865"
                 android:textSize="16sp" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"

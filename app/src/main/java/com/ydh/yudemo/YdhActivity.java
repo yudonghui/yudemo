@@ -20,6 +20,7 @@ import com.ydh.yudemo.friends.FriendsActivity;
 import com.ydh.yudemo.gallery.GalleryActivity;
 import com.ydh.yudemo.keyboard.KeyboardActivity;
 import com.ydh.yudemo.common.permission.PermissionActivity;
+import com.ydh.yudemo.mpandroidchart.MPAndroidChartActivity;
 import com.ydh.yudemo.permissiontest.PermissionTestActivity;
 import com.ydh.yudemo.qiantao.QiantaoActivity;
 import com.ydh.yudemo.reptile.ReptileActivity;
@@ -59,6 +60,7 @@ public class YdhActivity extends AppCompatActivity {
     private TextView mQiantao;
     private TextView mYuanJiao;
     private TextView mRetrofit;
+    private TextView mMPAndroidChart;
     private TextView mTree;
     private TextView mUtils;
     private TextView mFrame;
@@ -97,6 +99,7 @@ public class YdhActivity extends AppCompatActivity {
         mQiantao = (TextView) findViewById(R.id.qiantao);
         mYuanJiao = (TextView) findViewById(R.id.yuanjiao);
         mRetrofit = (TextView) findViewById(R.id.retrofit);
+        mMPAndroidChart = findViewById(R.id.MPAndroidChart);
         mTree = findViewById(R.id.tree);
         mUtils = findViewById(R.id.utils);
         mFrame = findViewById(R.id.frame);
@@ -105,6 +108,7 @@ public class YdhActivity extends AppCompatActivity {
 
     private void addListener() {
         mZuJian.setOnClickListener(ZuJianListener);//组件化测试
+        mMPAndroidChart.setOnClickListener(MPAndroidChartListener);//折线图MPAndroidChart的使用
         mSelfView.setOnClickListener(SelfViewListener);//简单的自定义控件
         mCountDown.setOnClickListener(CountDownListener);//引导页倒计时
         mFloatView.setOnClickListener(FloatViewListener);//可拖动的控件布局
@@ -136,6 +140,12 @@ public class YdhActivity extends AppCompatActivity {
 
     }
 
+    View.OnClickListener MPAndroidChartListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(MPAndroidChartActivity.class);
+        }
+    };
     View.OnClickListener ZuJianListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
