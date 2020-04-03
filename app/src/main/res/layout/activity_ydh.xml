@@ -46,6 +46,20 @@
                 android:background="@color/grayColor" />
 
             <TextView
+                android:id="@+id/tv_catalog"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="目录结构"
+                android:textColor="#e78865"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grayColor" />
+
+            <TextView
                 android:id="@+id/money_editext"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -254,7 +268,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="@color/grayColor" />
-
 
             <TextView
                 android:id="@+id/permission"

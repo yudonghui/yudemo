@@ -1,23 +1,26 @@
 package com.ydh.yudemo.common.popup;
 
-import android.database.DataSetObserver;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.ViewUtils;
+import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListPopupWindow;
+import android.widget.PopupMenu;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+
+import com.blankj.utilcode.util.ToastUtils;
 import com.ydh.yudemo.DisplayUtil;
 import com.ydh.yudemo.R;
 import com.ydh.yudemo.common.CommonBean;
@@ -52,11 +55,14 @@ public class PopupActivity extends AppCompatActivity {
         initListPopupWindow();
     }
 
-    @OnClick({R.id.tv_popup_window, R.id.tv_popup_window_lv, R.id.tv_popup_window_list})
+    @OnClick({R.id.tv_popup_window, R.id.tv_popup_menu, R.id.tv_popup_window_lv, R.id.tv_popup_window_list})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_popup_window:
                 popupWindow.showAsDropDown(tvPopupWindow, 0, 0);//偏移量  负值是向左或者向上。正值是向右或者向下
+                break;
+            case R.id.tv_popup_menu:
+                popupMenu(view);
                 break;
             case R.id.tv_popup_window_lv:
                 lvPopupWindow.showAsDropDown(tvPopupWindowLv, 0, 0);//偏移量  负值是向左或者向上。正值是向右或者向下
@@ -65,6 +71,22 @@ public class PopupActivity extends AppCompatActivity {
                 listPopupWindow.show();
                 break;
         }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    private void popupMenu(View view) {
+        PopupMenu popupMenu = new PopupMenu(this, view);
+        popupMenu.getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
+        popupMenu.setGravity(Gravity.RIGHT);
+        popupMenu.show();
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                ToastUtils.showShort(item.getTitle());
+                return false;
+            }
+        });
+
     }
 
     /**
@@ -168,4 +190,5 @@ public class PopupActivity extends AppCompatActivity {
             }
         }
     };
+
 }

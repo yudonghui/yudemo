@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".common.dialogyu.SelfDialogActivity">
+
+    <TextView
+        android:id="@+id/tv_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/red_txt"
+        android:padding="15dp"
+        android:text="中间弹出框"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_bottom_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/red_txt"
+        android:padding="15dp"
+        android:text="底部弹出框list"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_center"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_center_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/red_txt"
+        android:padding="15dp"
+        android:text="中间弹出框two"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_bottom_list"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_center_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/red_txt"
+        android:padding="15dp"
+        android:text="中间弹出框three"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_center" />
+</android.support.constraint.ConstraintLayout>

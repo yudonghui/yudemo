@@ -84,6 +84,7 @@ dependencies {
     implementation 'org.greenrobot:greendao:3.2.2' // add library
     //折线图 饼状图 散点图 条形图线图
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
     //解析html第三方库
     api project(':common2')
     if (!isDebug.toBoolean()) {

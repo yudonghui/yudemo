@@ -38,7 +38,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".mpandroidchart.MPAndroidChartActivity"></activity>
+        <activity android:name=".common.dialogyu.SelfDialogActivity"></activity>
+        <activity android:name=".catalog.CatalogActivity" />
+        <activity android:name=".mpandroidchart.MPAndroidChartActivity" />
         <activity android:name=".frame.database.DataBaseActivity" />
         <activity android:name=".frame.FrameActivity" />
         <activity android:name=".androidutilcode.UtilsActivity" />

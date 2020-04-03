@@ -5,103 +5,17 @@
     android:layout_height="fill_parent"
     android:background="#ffffff">
 
-    <Button
+    <TextView
+        android:id="@+id/tv_popup_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:onClick="button"
-        android:text="点击" />
-
-    <!-- <com.ydh.yudemo.widget.TestView
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:layout_alignParentTop="true" />-->
-    <com.ydh.yudemo.TestView2
-        android:layout_width="300dp"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:gravity="center"
-            android:background="@color/green_txt"
-            android:text="中国" />
-
-        <TextView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:gravity="center"
-            android:background="@color/red_txt"
-            android:text="今年" />
-    </com.ydh.yudemo.TestView2>
-    <!-- <com.ydh.yudemo.widget.ScrollViewGroup
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content">
-
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="200dp"
-             android:background="@color/colorPrimary" />
-
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="200dp"
-             android:background="@color/colorAccent" />
-
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="200dp"
-             android:background="@color/blackColor" />
-
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="200dp"
-             android:background="@color/colorAccent" />
-
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="200dp"
-             android:background="@color/red_txt" />
-
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="200dp"
-             android:background="@color/blue_bg" />
-
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="200dp"
-             android:background="@color/green_txt" />
-
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="200dp"
-             android:background="@color/orange_bg" />
-
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="200dp"
-             android:background="@color/yellow_bg" />
-
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="200dp"
-             android:background="@color/white" />
-
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="200dp"
-             android:background="@color/orange_let" />
-
-
-     </com.ydh.yudemo.widget.ScrollViewGroup>-->
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="100dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/red_txt"
         android:gravity="center"
-        android:text="测试乐善奖法拉涉及到发疯阿斯顿"
-        android:textSize="20sp" />
+        android:padding="10dp"
+        android:text="点击"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
 </RelativeLayout>

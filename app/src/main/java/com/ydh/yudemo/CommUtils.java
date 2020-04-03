@@ -21,4 +21,8 @@ public class CommUtils {
         }
         return commUtils;
     }
+    public static int dp2px(double dipValue) {
+        float m = App.getContext().getResources().getDisplayMetrics().density;
+        return (int) (dipValue * m + 0.5f);
+    }
 }
