@@ -12,6 +12,7 @@ import com.blankj.utilcode.util.ToastUtils;
 import com.ydh.yudemo.BaseActivity;
 import com.ydh.yudemo.R;
 import com.ydh.yudemo.common.dialogyu.SelfDialogActivity;
+import com.ydh.yudemo.common.fanxing.FanXingActivity;
 import com.ydh.yudemo.common.moneyeditext.MoneyEditextActivity;
 import com.ydh.yudemo.common.permission.PermissionActivity;
 import com.ydh.yudemo.common.permission.YuAlertDialog;
@@ -53,6 +54,9 @@ public class CommonActivity extends AppCompatActivity {
                             case "dialog":
                                startActivity(new Intent(mContext, SelfDialogActivity.class));
                                 break;
+                            case "fanxing":
+                                startActivity(new Intent(mContext, FanXingActivity.class));
+                                break;
 
                         }
                     }
@@ -67,6 +71,7 @@ public class CommonActivity extends AppCompatActivity {
         mList.add(new CommonBean("popup", "弹出框popup"));
         mList.add(new CommonBean("permisson", "权限的申请"));
         mList.add(new CommonBean("dialog", "自定义dialog"));
+        mList.add(new CommonBean("fanxing", "泛型"));
         return mList;
     }
 

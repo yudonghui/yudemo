@@ -1,9 +1,10 @@
 package com.ydh.yudemo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,7 +16,6 @@ import com.ydh.yudemo.banner.BannerActivity;
 import com.ydh.yudemo.catalog.CatalogActivity;
 import com.ydh.yudemo.circle.CircleViewActivity;
 import com.ydh.yudemo.common.CommonActivity;
-import com.ydh.yudemo.common.popup.PopupActivity;
 import com.ydh.yudemo.draggridview.DragActivity;
 import com.ydh.yudemo.expandtextview.ExpandTextViewActivity;
 import com.ydh.yudemo.frame.FrameActivity;
@@ -25,6 +25,8 @@ import com.ydh.yudemo.keyboard.KeyboardActivity;
 import com.ydh.yudemo.mpandroidchart.MPAndroidChartActivity;
 import com.ydh.yudemo.permissiontest.PermissionTestActivity;
 import com.ydh.yudemo.qiantao.QiantaoActivity;
+import com.ydh.yudemo.recyclerview.RecyclerViewDemoActivity;
+import com.ydh.yudemo.recyclerview.SpaceItemDecoration;
 import com.ydh.yudemo.reptile.ReptileActivity;
 import com.ydh.yudemo.retrofitrxjava.RetrofitActivity;
 import com.ydh.yudemo.scroll.ScrollActivity;
@@ -34,6 +36,11 @@ import com.ydh.yudemo.sticky.StickyActivity;
 import com.ydh.yudemo.tree.TreeActivity;
 import com.ydh.yudemo.weelview.WeelViewActivity;
 import com.ydh.yudemo.yuanjiao.YuanJiaoActivity;
+import com.zhy.adapter.recyclerview.CommonAdapter;
+import com.zhy.adapter.recyclerview.base.ViewHolder;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -102,22 +109,71 @@ public class YdhActivity extends AppCompatActivity {
     TextView test;
     @BindView(R.id.retrofit)
     TextView retrofit;
+    @BindView(R.id.recyclerView)
+    RecyclerView recyclerView;
+    List<HomeEntity> mDatasList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ydh);
         ButterKnife.bind(this);
+        initData();
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.addItemDecoration(new SpaceItemDecoration(10, true, SpaceItemDecoration.GRIDLAYOUT));
+        recyclerView.setAdapter(new CommonAdapter<HomeEntity>(this, R.layout.item_home, mDatasList) {
+            @Override
+            protected void convert(ViewHolder holder, final HomeEntity o, int position) {
+                holder.setText(R.id.textView, o.getName());
+                holder.setOnClickListener(R.id.textView, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        skip(o.getType());
+                    }
+                });
+            }
+        });
     }
 
-    @OnClick({R.id.zujian, R.id.MPAndroidChart, R.id.tv_catalog, R.id.money_editext, R.id.frame, R.id.selfView,
-            R.id.countdown, R.id.floatView, R.id.keyboard, R.id.circleView, R.id.jc, R.id.gragGridView, R.id.smartRefreshLayout,
-            R.id.banner, R.id.weelView, R.id.gallery, R.id.sticky, R.id.matchView, R.id.permission, R.id.expandTextView,
-            R.id.reptile, R.id.comment_reply, R.id.utils, R.id.scroll, R.id.js, R.id.animation, R.id.qiantao, R.id.yuanjiao,
-            R.id.tree, R.id.test, R.id.retrofit})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.zujian:
+    private void initData() {
+        mDatasList.add(new HomeEntity("组件化", Constants.ZUJIAN));
+        mDatasList.add(new HomeEntity("折线图", Constants.ZHEXIANTU));
+        mDatasList.add(new HomeEntity("目录结构", Constants.MULUJIEGOU));
+        mDatasList.add(new HomeEntity("通用代码", Constants.TONGYONGDAIMA));
+        mDatasList.add(new HomeEntity("框架", Constants.KUANGJIA));
+        mDatasList.add(new HomeEntity("自定义控件", Constants.ZIDINGYIVIEW));
+        mDatasList.add(new HomeEntity("引导页倒计时", Constants.YINDAOYE));
+        mDatasList.add(new HomeEntity("可拖动的控件布局", Constants.KETUODONGVIEW));
+        mDatasList.add(new HomeEntity("自定义键盘", Constants.ZIDINGYIJIANPAN));
+        mDatasList.add(new HomeEntity("圆形图", Constants.YUANXINGTU));
+        mDatasList.add(new HomeEntity("竞彩概率计算", Constants.JC));
+        mDatasList.add(new HomeEntity("可拖动GridView", Constants.TUOZHUAIGRID));
+        mDatasList.add(new HomeEntity("SmartRefreshLayout", Constants.REFRESH));
+        mDatasList.add(new HomeEntity("轮播图", Constants.LUNBOTU));
+        mDatasList.add(new HomeEntity("WheelView", Constants.WEELVIEW));
+        mDatasList.add(new HomeEntity("画廊", Constants.HUALANG));
+        mDatasList.add(new HomeEntity("吸附效果", Constants.STICKY));
+        mDatasList.add(new HomeEntity("赛事比赛自定义", Constants.MATCHVIEW));
+        mDatasList.add(new HomeEntity("权限", Constants.PERMISSION));
+        mDatasList.add(new HomeEntity("可展开的textview", Constants.EXPANDTEXTVIEW));
+        mDatasList.add(new HomeEntity("爬虫", Constants.PACHONG));
+        mDatasList.add(new HomeEntity("朋友圈相关", Constants.PENGYOUQUAN));
+        mDatasList.add(new HomeEntity("AndroidUtilCode", Constants.GONGJULEI));
+        mDatasList.add(new HomeEntity("测量滑动的距离", Constants.CELIANGSCROLL));
+        mDatasList.add(new HomeEntity("js交互", Constants.JS));
+        mDatasList.add(new HomeEntity("动画效果", Constants.ANIMATION));
+        mDatasList.add(new HomeEntity("嵌套问题的解决", Constants.QIANTAOWENTI));
+        mDatasList.add(new HomeEntity("圆角或者圆形图", Constants.YUANJIAO));
+        mDatasList.add(new HomeEntity("家谱树形图", Constants.SHUXINGTU));
+        mDatasList.add(new HomeEntity("retrofit", Constants.RETROFIT));
+        mDatasList.add(new HomeEntity("RecyclerView", Constants.RECYCLERVIEW));
+        mDatasList.add(new HomeEntity("测试", Constants.TEST));
+    }
+
+    private void skip(String type) {
+        switch (type) {
+            case Constants.ZUJIAN:
                 try {
                     Class clazz = Class.forName("com.ydh.module_first.MainActivity");
                     Intent intent = new Intent(YdhActivity.this, clazz);
@@ -126,95 +182,98 @@ public class YdhActivity extends AppCompatActivity {
                     Toast.makeText(YdhActivity.this, "没有找到这个类", Toast.LENGTH_SHORT).show();
                 }
                 break;
-            case R.id.MPAndroidChart://折线图MPAndroidChart的使用
+            case Constants.ZHEXIANTU:
                 startActivity(MPAndroidChartActivity.class);
                 break;
-            case R.id.tv_catalog://目录结构
+            case Constants.MULUJIEGOU:
                 startActivity(CatalogActivity.class);
                 break;
-            case R.id.money_editext://通用代码
+            case Constants.TONGYONGDAIMA:
                 startActivity(CommonActivity.class);
                 break;
-            case R.id.frame://框架
+            case Constants.KUANGJIA:
                 startActivity(FrameActivity.class);
                 break;
-            case R.id.selfView://简单的自定义控件
+            case Constants.ZIDINGYIVIEW://简单的自定义控件
                 startActivity(SelfViewActivity.class);
                 break;
-            case R.id.countdown://引导页倒计时
+            case Constants.YINDAOYE://引导页倒计时
                 startActivity(CountDownActivity.class);
                 break;
-            case R.id.floatView://可拖动的控件布局
+            case Constants.KETUODONGVIEW://可拖动的控件布局
                 startActivity(FloatViewActivity.class);
                 break;
-            case R.id.keyboard://自定义键盘
+            case Constants.ZIDINGYIJIANPAN://自定义键盘
                 startActivity(KeyboardActivity.class);
                 break;
-            case R.id.circleView://圆形图
+            case Constants.YUANXINGTU://圆形图
                 startActivity(CircleViewActivity.class);
                 break;
-            case R.id.jc://竞彩概率计算
+            case Constants.JC://竞彩概率计算
                 startActivity(JcActivity.class);
                 break;
-            case R.id.gragGridView:
+            case Constants.TUOZHUAIGRID:
                 startActivity(DragActivity.class);
                 break;
-            case R.id.smartRefreshLayout:
+            case Constants.REFRESH:
                 startActivity(SmartRefreshLayoutActivity.class);
                 break;
-            case R.id.banner:
+            case Constants.LUNBOTU:
                 startActivity(BannerActivity.class);
                 break;
-            case R.id.weelView:
+            case Constants.WEELVIEW:
                 startActivity(WeelViewActivity.class);
                 break;
-            case R.id.gallery://画廊效果
+            case Constants.HUALANG://画廊效果
                 startActivity(GalleryActivity.class);
                 break;
-            case R.id.sticky://recyclerView吸附效果
+            case Constants.STICKY://recyclerView吸附效果
                 startActivity(StickyActivity.class);
                 break;
-            case R.id.matchView://赛事比赛自定义控件
+            case Constants.MATCHVIEW://赛事比赛自定义控件
                 startActivity(MatchActivity.class);
                 break;
-            case R.id.permission:
+            case Constants.PERMISSION:
                 startActivity(PermissionTestActivity.class);
                 break;
-            case R.id.expandTextView://可展开的textview
+            case Constants.EXPANDTEXTVIEW://可展开的textview
                 startActivity(ExpandTextViewActivity.class);
                 break;
-            case R.id.reptile://爬虫
+            case Constants.PACHONG://爬虫
                 startActivity(ReptileActivity.class);
                 break;
-            case R.id.comment_reply://与微信朋友圈相关
+            case Constants.PENGYOUQUAN://与微信朋友圈相关
                 startActivity(FriendsActivity.class);
                 break;
-            case R.id.utils://AndroidUtilCode工具类的应用
+            case Constants.GONGJULEI://AndroidUtilCode工具类的应用
                 startActivity(UtilsActivity.class);
                 break;
-            case R.id.scroll://测量滑动的距离
+            case Constants.CELIANGSCROLL://测量滑动的距离
                 startActivity(ScrollActivity.class);
                 break;
-            case R.id.js://js交互
+            case Constants.JS://js交互
                 startActivity(JsActivity.class);
                 break;
-            case R.id.animation://动画效果
+            case Constants.ANIMATION://动画效果
                 startActivity(AnimationsActivity.class);
                 break;
-            case R.id.qiantao://嵌套问题的解决
+            case Constants.QIANTAOWENTI://嵌套问题的解决
                 startActivity(QiantaoActivity.class);
                 break;
-            case R.id.yuanjiao://圆角或者圆形图
+            case Constants.YUANJIAO://圆角或者圆形图
                 startActivity(YuanJiaoActivity.class);
                 break;
-            case R.id.tree://家谱树形图
+            case Constants.SHUXINGTU://家谱树形图
                 startActivity(TreeActivity.class);
                 break;
-            case R.id.test:
-                startActivity(TestActivity.class);
-                break;
-            case R.id.retrofit: //retrofit
+            case Constants.RETROFIT: //retrofit
                 startActivity(RetrofitActivity.class);
+                break;
+            case Constants.RECYCLERVIEW: //retrofit
+                startActivity(RecyclerViewDemoActivity.class);
+                break;
+            case Constants.TEST:
+                startActivity(TestActivity.class);
                 break;
         }
     }
