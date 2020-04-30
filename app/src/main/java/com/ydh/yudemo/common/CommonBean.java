@@ -1,6 +1,8 @@
 package com.ydh.yudemo.common;
 
-public class CommonBean {
+import java.io.Serializable;
+
+public class CommonBean implements Serializable {
     private String type;
     private String content;
 
@@ -23,5 +25,13 @@ public class CommonBean {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        return "CommonBean{" +
+                "type='" + type + '\'' +
+                ", content='" + content + '\'' +
+                '}';
     }
 }

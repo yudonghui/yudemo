@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.ydh.yudemo.R;
+import com.ydh.yudemo.common.CommonBean;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,5 +1,6 @@
 package com.ydh.yudemo.common.popup;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -20,10 +21,12 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.ydh.yudemo.DisplayUtil;
 import com.ydh.yudemo.R;
 import com.ydh.yudemo.common.CommonBean;
+import com.ydh.yudemo.common.fanxing.FanXingActivity;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
 
