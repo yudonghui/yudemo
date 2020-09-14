@@ -38,7 +38,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".recyclerview.RecyclerViewDemoActivity"></activity>
+        <activity android:name=".interview.InterviewActivity"></activity>
+        <activity android:name=".recyclerview.RecyclerViewDemoActivity" />
         <activity android:name=".common.fanxing.FanXingActivity" />
         <activity android:name=".common.dialogyu.SelfDialogActivity" />
         <activity android:name=".catalog.CatalogActivity" />

@@ -20,6 +20,7 @@ import com.ydh.yudemo.weelview.WeelViewActivity;
 import com.ydh.yudemo.yuanjiao.YuanJiaoActivity;
 
 public interface Constants {
+    String INTERVIEW = "interview";
     String ZUJIAN = "zujian";
     String ZHEXIANTU = "zhexiantu";
     String MULUJIEGOU = "mulujiegou";

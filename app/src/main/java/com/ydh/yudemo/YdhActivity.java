@@ -21,6 +21,7 @@ import com.ydh.yudemo.expandtextview.ExpandTextViewActivity;
 import com.ydh.yudemo.frame.FrameActivity;
 import com.ydh.yudemo.friends.FriendsActivity;
 import com.ydh.yudemo.gallery.GalleryActivity;
+import com.ydh.yudemo.interview.InterviewActivity;
 import com.ydh.yudemo.keyboard.KeyboardActivity;
 import com.ydh.yudemo.mpandroidchart.MPAndroidChartActivity;
 import com.ydh.yudemo.permissiontest.PermissionTestActivity;
@@ -137,6 +138,7 @@ public class YdhActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        mDatasList.add(new HomeEntity("面试相关", Constants.INTERVIEW));
         mDatasList.add(new HomeEntity("组件化", Constants.ZUJIAN));
         mDatasList.add(new HomeEntity("折线图", Constants.ZHEXIANTU));
         mDatasList.add(new HomeEntity("目录结构", Constants.MULUJIEGOU));
@@ -173,7 +175,9 @@ public class YdhActivity extends AppCompatActivity {
 
     private void skip(String type) {
         switch (type) {
-            case Constants.ZUJIAN:
+            case Constants.INTERVIEW://面试相关
+                startActivity(InterviewActivity.class);
+            case Constants.ZUJIAN://组件化
                 try {
                     Class clazz = Class.forName("com.ydh.module_first.MainActivity");
                     Intent intent = new Intent(YdhActivity.this, clazz);
@@ -191,7 +195,7 @@ public class YdhActivity extends AppCompatActivity {
             case Constants.TONGYONGDAIMA:
                 startActivity(CommonActivity.class);
                 break;
-            case Constants.KUANGJIA:
+            case Constants.KUANGJIA://框架
                 startActivity(FrameActivity.class);
                 break;
             case Constants.ZIDINGYIVIEW://简单的自定义控件
