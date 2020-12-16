@@ -177,6 +177,7 @@ public class YdhActivity extends AppCompatActivity {
         switch (type) {
             case Constants.INTERVIEW://面试相关
                 startActivity(InterviewActivity.class);
+                break;
             case Constants.ZUJIAN://组件化
                 try {
                     Class clazz = Class.forName("com.ydh.module_first.MainActivity");

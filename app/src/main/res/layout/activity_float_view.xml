@@ -4,105 +4,174 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="这是第一条"
-            android:gravity="center"
-            android:textColor="#456789"
-            android:textSize="18sp" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="这是第二条"
-            android:gravity="center"
-            android:textColor="#146789"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第一条"
+                android:textColor="#456789"
+                android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="这是第三条"
-            android:gravity="center"
-            android:textColor="#856789"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第二条"
+                android:textColor="#146789"
+                android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="这是第三条"
-            android:gravity="center"
-            android:textColor="#a56789"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第三条"
+                android:textColor="#856789"
+                android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="这是第四条"
-            android:gravity="center"
-            android:textColor="#b06789"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第三条"
+                android:textColor="#a56789"
+                android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="这是第五条"
-            android:gravity="center"
-            android:textColor="#cf3734"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第四条"
+                android:textColor="#b06789"
+                android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="这是第六条"
-            android:gravity="center"
-            android:textColor="#d50000"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第五条"
+                android:textColor="#cf3734"
+                android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="这是第九条"
-            android:textColor="#f56789"
-            android:gravity="center"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第六条"
+                android:textColor="#d50000"
+                android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="这是第九条"
-            android:gravity="center"
-            android:textColor="#f56789"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第九条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="这是第九条"
-            android:gravity="center"
-            android:textColor="#f56789"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第九条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="这是第九条"
-            android:gravity="center"
-            android:textColor="#f56789"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第九条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第九条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第九条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第九条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第45条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第九条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第10条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第11条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第22条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="这是第23条"
+                android:textColor="#f56789"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </ScrollView>
 
     <com.ydh.yudemo.widget.FloatViewLayout
         android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/tuodong"
