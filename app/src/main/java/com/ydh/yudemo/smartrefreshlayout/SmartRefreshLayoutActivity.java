@@ -1,12 +1,15 @@
 package com.ydh.yudemo.smartrefreshlayout;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.widget.ListView;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
+import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.ydh.yudemo.R;
 
@@ -18,7 +21,8 @@ public class SmartRefreshLayoutActivity extends AppCompatActivity {
     private SmartRefreshLayout mRefresh;
     private ListView mListView;
     private ArrayList<String> mDataList = new ArrayList<>();
-    private boolean isFirstEnter=true;
+    private boolean isFirstEnter = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +30,8 @@ public class SmartRefreshLayoutActivity extends AppCompatActivity {
         initView();
         addData();
         addListener();
-        if (isFirstEnter){
-            isFirstEnter=false;
+        if (isFirstEnter) {
+            isFirstEnter = false;
             mRefresh.autoRefresh();
         }
     }
@@ -54,18 +58,18 @@ public class SmartRefreshLayoutActivity extends AppCompatActivity {
                     public void run() {
                         mRefresh.finishRefresh();
                     }
-                },3000);
+                }, 3000);
             }
         });
-        mRefresh.setOnLoadmoreListener(new OnLoadmoreListener() {
+        mRefresh.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
-            public void onLoadmore(RefreshLayout refreshlayout) {
+            public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
                 new Timer().schedule(new TimerTask() {
                     @Override
                     public void run() {
-                        mRefresh.finishLoadmore();
+                        mRefresh.finishLoadMore();
                     }
-                },3000);
+                }, 3000);
             }
         });
 

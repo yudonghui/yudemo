@@ -1,7 +1,7 @@
 package com.ydh.module_first;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ydh.module_first.bean.TreeBean;
 import com.ydh.module_first.selfview.TreeView;

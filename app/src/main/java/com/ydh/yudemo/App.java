@@ -2,10 +2,10 @@ package com.ydh.yudemo;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
-import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreater;
 import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.ydh.yudemo.frame.database.db.DaoMaster;
@@ -15,32 +15,33 @@ import org.litepal.LitePalApplication;
 import org.xutils.x;
 
 
-
 /**
  * Created by Android on 2018/3/21.
  */
 
 public class App extends LitePalApplication {
     private static App instance;
-    public static boolean ISLOG=true;
-    public static String rid="1000796";
+    public static boolean ISLOG = true;
+    public static String rid = "1000796";
     private DaoSession daoSession;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        instance=this;
+        instance = this;
         x.Ext.init(this);
-       // addData();
+        // addData();
         //初始化数据库
         initGreenDao();
     }
+
     private void initGreenDao() {
         DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(this, "zbc_test.db");
         SQLiteDatabase db = devOpenHelper.getWritableDatabase();
         DaoMaster daoMaster = new DaoMaster(db);
         daoSession = daoMaster.newSession();
     }
+
     /**
      * 获取 DaoSession
      *
@@ -49,16 +50,7 @@ public class App extends LitePalApplication {
     public DaoSession getDaoSession() {
         return daoSession;
     }
-    private void addData() {
-        SmartRefreshLayout.setDefaultRefreshHeaderCreater(new DefaultRefreshHeaderCreater() {
-            @NonNull
-            @Override
-            public RefreshHeader createRefreshHeader(Context context, RefreshLayout layout) {
-                layout.setPrimaryColorsId(R.color.red_txt);
-                return null;
-            }
-        });
-    }
+
     public static App getInstance() {
         return instance;
     }

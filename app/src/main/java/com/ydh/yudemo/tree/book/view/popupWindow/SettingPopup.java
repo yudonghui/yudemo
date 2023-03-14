@@ -8,11 +8,12 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
-import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
+
+import androidx.cardview.widget.CardView;
 
 import com.ydh.yudemo.R;
 import com.ydh.yudemo.tree.book.ReadingFragment;

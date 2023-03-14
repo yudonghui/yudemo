@@ -18,8 +18,8 @@ package com.ydh.yudemo.permissiontest.permission;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
 import com.ydh.yudemo.permissiontest.permission.checker.DoubleChecker;
 import com.ydh.yudemo.permissiontest.permission.checker.PermissionChecker;

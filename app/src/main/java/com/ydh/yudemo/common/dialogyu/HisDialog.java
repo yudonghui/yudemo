@@ -2,7 +2,6 @@ package com.ydh.yudemo.common.dialogyu;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -11,6 +10,8 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import com.ydh.yudemo.App;
 import com.ydh.yudemo.CommUtils;

@@ -7,6 +7,8 @@ import android.text.Spanned;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 
+import androidx.appcompat.widget.AppCompatEditText;
+
 /**
  * 只能输入数字和小数点
  * 小数点后只能输入两位
@@ -14,7 +16,7 @@ import android.util.AttributeSet;
  * 小数点不能作为首字符
  * 如果需要监听输入内容的变化可以调用setTextChangedListener进行设置。
  */
-public class MoneyEditText extends android.support.v7.widget.AppCompatEditText {
+public class MoneyEditText extends AppCompatEditText {
     public MoneyEditText(Context context) {
         super(context);
         init();

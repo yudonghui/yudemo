@@ -15,7 +15,7 @@
  */
 package com.ydh.yudemo.permissiontest.permission;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * <p>Permission request.</p>

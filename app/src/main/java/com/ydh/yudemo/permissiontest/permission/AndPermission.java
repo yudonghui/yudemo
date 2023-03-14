@@ -18,9 +18,9 @@ package com.ydh.yudemo.permissiontest.permission;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.fragment.app.Fragment;
 
 import com.ydh.yudemo.permissiontest.permission.setting.PermissionSetting;
 import com.ydh.yudemo.permissiontest.permission.source.AppActivitySource;
@@ -59,12 +59,12 @@ public class AndPermission {
     /**
      * Some privileges permanently disabled, may need to set up in the execute.
      *
-     * @param fragment          {@link android.support.v4.app.Fragment}.
+     * @param fragment          {@link androidx.fragment.app.Fragment}.
      * @param deniedPermissions one or more permissions.
      * @return true, other wise is false.
      */
     public static boolean hasAlwaysDeniedPermission(
-            @NonNull android.support.v4.app.Fragment fragment,
+            @NonNull androidx.fragment.app.Fragment fragment,
             @NonNull List<String> deniedPermissions) {
         return hasAlwaysDeniedPermission(new SupportFragmentSource(fragment), deniedPermissions);
     }
@@ -125,12 +125,12 @@ public class AndPermission {
     /**
      * Some privileges permanently disabled, may need to set up in the execute.
      *
-     * @param fragment          {@link android.support.v4.app.Fragment}.
+     * @param fragment          {@link androidx.fragment.app.Fragment}.
      * @param deniedPermissions one or more permissions.
      * @return true, other wise is false.
      */
     public static boolean hasAlwaysDeniedPermission(
-            @NonNull android.support.v4.app.Fragment fragment,
+            @NonNull androidx.fragment.app.Fragment fragment,
             @NonNull  String... deniedPermissions) {
         return hasAlwaysDeniedPermission(new SupportFragmentSource(fragment), deniedPermissions);
     }
@@ -218,13 +218,13 @@ public class AndPermission {
     }
 
     /**
-     * With android.support.v4.app.Fragment.
+     * With androidx.fragment.app.Fragment.
      *
-     * @param fragment {@link android.support.v4.app.Fragment}.
+     * @param fragment {@link androidx.fragment.app.Fragment}.
      * @return {@link Request}.
      */
     @NonNull
-    public static Request with(@NonNull android.support.v4.app.Fragment fragment) {
+    public static Request with(@NonNull androidx.fragment.app.Fragment fragment) {
         return FACTORY.create(new SupportFragmentSource(fragment));
     }
 
