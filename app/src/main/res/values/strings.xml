@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">收藏</string>
+    <string name="app_name">学习总结</string>
     <!--——————————————————————权限申请——————————————————————-->
     <string name="permission_name_calendar">日历</string>
     <string name="permission_name_camera">相机</string>
